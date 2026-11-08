@@ -1,0 +1,424 @@
+
+body {
+    margin: 70;
+    min-height: 90vh;
+    background: #ffffff;
+}
+
+.free {
+    width: 100%;
+    height: 80vh;
+    background: #e0ebf3;
+     
+}
+.free h1 {
+    margin-top: 30px;
+    transform: translateY(10px);
+    color: #6e7b85;
+    font-size: 45px;
+}
+
+
+body {
+    font-family: 'Amiri', serif;
+    }
+    .free h1 {
+ margin-top: 30px;
+ transform: translateY(10px);
+color: #6e7b85;
+font-size: 45px;
+    }
+    
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 2px solid #777;
+    border-radius: 12px;
+    background: #eeeeee;
+    color: #222;
+    font-size: 17px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #c9a227;
+}
+
+.search-box button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 12px;
+    background: #c9a227;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#results {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+}
+
+
+
+.search-box{
+transform: translateY(15px);
+
+
+}
+.text b {
+transform: translateY(50px);
+
+
+
+}
+.butona{
+
+
+    
+}
+.buttonc{
+color: #ffffff;
+background-color: blue;
+    border: #222;
+    border-radius: 5px;
+    border-color: #222;
+}
+#myDiv {
+    
+     grid-area: popup;
+    display: none;
+    background: gray;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: 999;
+        height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+    
+.liyokhtog{
+ display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: ". popup";
+    
+background-color: blue;
+
+}
+.buttonm{
+border-radius: 50px;
+color: #afadad;
+background-color: #feffff;
+border: #222;
+transform: translateY(1px);
+transform: translatex(250px);
+
+
+
+}
+.one{
+
+transform: translatey(17px);
+width: 250px;
+text-align: left;
+       background-color: rgb(255, 246, 246);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50px;
+    border: #222;
+}
+.one:hover {
+    background-color: rgb(173, 173, 173);
+}
+.surah {
+    font-family: 'Amiri', serif ;
+}
+.two{
+
+transform: translatey(17px);
+width: 250px;
+text-align: left;
+       background-color: rgb(255, 246, 246);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50px;
+    border: #222;
+}
+.two:hover {
+    background-color: rgb(173, 173, 173);
+}
+
+/* ===== زخرفة قرآنية حمراء وذهبية ===== */
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #fff9e9;
+    color: #4b1717;
+    font-family: "Amiri", serif;
+}
+
+/* إطار الصفحة */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 8px;
+    border: 3px double #b68a2d;
+    outline: 1px solid #8f2020;
+    outline-offset: 4px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* عنوان السورة */
+h1, #surahTitle {
+    text-align: center;
+    color: #9d2020;
+    font-size: 36px;
+    margin: 15px auto 30px;
+    padding: 15px 10px;
+    border-top: 2px solid #c39a3b;
+    border-bottom: 2px solid #c39a3b;
+    max-width: 700px;
+}
+
+/* زخرفة صغيرة حول العنوان */
+h1::before,
+#surahTitle::before {
+    content: "۞ ❁ ";
+    color: #c39a3b;
+}
+
+h1::after,
+#surahTitle::after {
+    content: " ❁ ۞";
+    color: #c39a3b;
+}
+
+/* صندوق الآيات */
+#ayahs {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 24px;
+    background: #fffdf6;
+    border: 2px solid #b68a2d;
+    border-radius: 14px;
+    box-shadow: 0 0 0 5px #f3e5bd,
+                0 5px 18px #6c25221c;
+
+    color: #421919;
+    font-family: "Amiri", serif;
+    font-size: 30px;
+    line-height: 2.3;
+    text-align: justify;
+    overflow-wrap: anywhere;
+}
+
+/* شكل جميل عند تحديد النص */
+::selection {
+    background: #9d2020;
+    color: #fff9e9;
+}
+
+/* الهاتف */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 14px;
+    }
+
+    h1, #surahTitle {
+        font-size: 28px;
+    }
+
+    #ayahs {
+        font-size: 25px;
+        padding: 20px 14px;
+        line-height: 2.2;
+    }
+}
+.free {
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تنظيم الديف الأزرق */
+
+/* العنوان */
+.free h1 {
+    margin: 10px auto;
+    transform: none;
+}
+
+/* خانة البحث */
+.search-box {
+    margin: 10px auto;
+    transform: none;
+    width: 90%;
+}
+
+/* اقتراحات البحث */
+#results {
+    position: static;
+    width: 90%;
+    max-width: 600px;
+    min-height: 0;
+    max-height: none;
+    height: auto;
+    margin: 5px auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* أزرار الاقتراحات */
+.search-result {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* زر قائمة السور */
+.butona {
+    position: relative;
+    display: block;
+    margin: 5px auto 10px;
+    z-index: 5;
+}
+
+
+.butona {
+    display: block;
+    position: relative;
+    margin: 5px auto 10px;
+    z-index: 5;
+}
+.free {
+    width: 100%;
+    height: 250px;
+    min-height: 0;
+    background: #e0ebf3;
+    box-sizing: border-box;
+    overflow: visible;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    transition: height 0.4s ease;
+}
+
+.free.searched {
+    height: 650px;
+}
+/* حجم الديف حسب الشاشة */
+.free {
+    height: 250px;
+    min-height: 0;
+}
+
+/* كي تبدأ تبحث */
+.free.searched {
+    height: 650px;
+}
+
+/* شاشات PC */
+@media (min-width: 900px) {
+    .free {
+        height: 280px;
+    }
+
+    .free.searched {
+        height: 650px;
+    }
+}
+
+/* التابلت */
+@media (min-width: 600px) and (max-width: 899px) {
+    .free {
+        height: 260px;
+    }
+
+    .free.searched {
+        height: 600px;
+    }
+}
+
+/* الهواتف */
+@media (max-width: 599px) {
+    .free {
+        height: 230px;
+    }
+
+    .free.searched {
+        height: 75vh;
+        min-height: 400px;
+    }
+
+    .free h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        width: 95%;
+    }
+}
+/* الهواتف الصغيرة جداً */
+@media (max-width: 350px) {
+    .free {
+        height: 270px;
+    }
+
+    .free.searched {
+        height: 85vh;
+        min-height: 450px;
+    }
+
+    .free h1 {
+        font-size: 25px;
+        margin: 5px auto;
+        transform: none;
+    }
+
+    .search-box {
+        width: 96%;
+        gap: 5px;
+        margin: 5px auto;
+    }
+
+    .search-box input {
+        padding: 10px 6px;
+        font-size: 14px;
+    }
+
+    .search-box button {
+        padding: 10px 9px;
+        font-size: 13px;
+    }
+
+    .butona {
+        margin: 3px auto;
+    }
+}

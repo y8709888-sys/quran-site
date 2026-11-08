@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سورة هود</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="ghjk.css">
+
+    <style>
+        body {
+            font-family: "Amiri", serif;
+            background: #fff;
+            color: #222;
+            padding: 20px;
+            line-height: 2.2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #ayahs {
+            font-size: 27px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="surahTitle">سورة هود</h1>
+
+    <div id="ayahs">جاري تحميل الآيات...</div>
+
+    <script>
+        fetch("https://api.alquran.cloud/v1/surah/11")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("فشل الاتصال");
+                }
+                return response.json();
+            })
+            .then(data => {
+                const surah = data.data;
+
+                document.getElementById("surahTitle").textContent =
+                    "سورة هود";
+
+                document.getElementById("ayahs").textContent =
+                    surah.ayahs.map(ayah =>
+                        ayah.text + " ۞"
+                    ).join(" ");
+            })
+            .catch(() => {
+                document.getElementById("ayahs").textContent =
+                    "تعذّر تحميل الآيات. تأكد من اتصالك بالإنترنت.";
+            });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سورة الفرقان</title>
+
+    <link rel="stylesheet" href="ghjk.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1 id="surahTitle">سورة الفرقان</h1>
+
+    <div id="ayahs">جاري تحميل الآيات...</div>
+
+    <script>
+        fetch("https://api.alquran.cloud/v1/surah/25")
+            .then(response => response.json())
+            .then(data => {
+                const ayahs = data.data.ayahs;
+
+                document.getElementById("ayahs").innerHTML =
+                    ayahs.map(ayah =>
+                        ayah.text + " ﴿" + ayah.numberInSurah + "﴾"
+                    ).join(" ");
+            })
+            .catch(error => {
+                document.getElementById("ayahs").textContent =
+                    "حدث خطأ أثناء تحميل السورة.";
+            });
+    </script>
+
+</body>
+</html>
